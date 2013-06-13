@@ -1,6 +1,6 @@
 from yum.plugins import TYPE_INTERACTIVE
 
-requires_api_version = '3.4' # TODO: Make sure this is right
+requires_api_version = '2.6'
 plugin_type = (TYPE_INTERACTIVE, )
 
 
@@ -14,6 +14,6 @@ def config_hook(conduit):
             help="don't print package description via yumwat")
 
 
-def postresolve_hook(conduit):
-    # pretty sure the package info printing code
-    # is gonna go here
+def predownload_hook(conduit):
+    for package in conduit.getDownloadPackages():
+        print package

@@ -7,9 +7,8 @@
 cp yumwat.conf /etc/yum/pluginconf.d/
 
 # TODO: make sure pluginpath is set in /etc/yum.conf
-# ... there has to be a better way to do this.
+# ... there has to be a better way to do that.
+
 
 # Install plugin
-# TODO: Make next line fail silently if dir exists
-mkdir /etc/yum/plugins
-cp yumwat.py /etc/yum/plugins/
+cp yumwat.py /usr/lib/yum-plugins
