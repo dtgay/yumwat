@@ -13,7 +13,8 @@ def config_hook(conduit):
             action='store_true', default=False,
             help="don't print package description via yumwat")
 
+def postresolve_hook(conduit):
+    ts = conduit.getTsInfo()
 
-def predownload_hook(conduit):
-    for package in conduit.getDownloadPackages():
-        print package
+    for tsmem in ts.getMembers():
+        #print tsmem.po
