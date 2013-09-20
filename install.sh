@@ -1,7 +1,7 @@
 #!/bin/sh
 # This script installs yumwat on Fedora 18 and 19.
 # Not tested on other platforms.
-# Probably requires root privs.
+# Requires root privs.
 
 # Install config file
 cp yumwat.conf /etc/yum/pluginconf.d/
