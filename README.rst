@@ -21,8 +21,6 @@ License
 
 GNU GPL v3+.
 
-"Be good." -- E.T.
-
 Installing
 ----------
 
