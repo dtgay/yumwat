@@ -17,4 +17,6 @@ def postresolve_hook(conduit):
     ts = conduit.getTsInfo()
 
     for tsmem in ts.getMembers():
-        #print tsmem.po
+        import q
+        q.q(tsmem.po)
+        print tsmem.po
