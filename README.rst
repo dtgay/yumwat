@@ -26,7 +26,19 @@ GNU GPL v3+.
 Installing
 ----------
 
-Installation is easy! From the project directory (where this file is):
+Installation is easy! From the project directory (where this file is),
+do the following.
+
+Shell Script
+************
+
+I have written a bit of a shell script that does the above installation
+for you. It is ``install.sh``, and will probably require root privs, like
+so: ``sudo ./install.sh``. Currently, it does not do step 3 below,
+so make sure to do that yourself.
+
+Manual Installation
+*******************
 
 1.  Install the plugin file: ``sudo cp yumwat.py /usr/lib/yum-plugins/``
 
@@ -36,20 +48,23 @@ Installation is easy! From the project directory (where this file is):
 3.  Add the line ``pluginpath=/usr/lib/yum-plugins`` to the file
     ``/etc/yum.conf``.
 
-Shell Script
-************
+Enabling and Disabling
+----------------------
 
-I have written a bit of a shell script that does the above installation
-for you. It is ``install.sh``, and will probably require root privs, like
-so: ``sudo ./install.sh``. Currently, it does not do step 3 above,
-so make sure to do that yourself.
+Shell Scripts
+*************
 
-Disabling
----------
+Running ``sudo ./enable.sh`` or ``sudo ./disable.sh`` will enable or disable
+the plugin, respectively, however **they will do this by overwriting your
+config file**, so if you have customizations, take the manual route, below.
+
+Manually flipping the switch
+****************************
 
 You can disable yumwat without uninstalling it by opening
 ``/etc/yum/pluginconf.d/yumwat.conf`` with a text editor and changing the line
-``enabled=1`` to ``enabled=0``.
+``enabled=1`` to ``enabled=0``. To enable the plugin, simply make sure that
+the line reads, ``enabled=1``.
 
 Uninstalling
 ------------
