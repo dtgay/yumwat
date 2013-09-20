@@ -16,6 +16,8 @@ def config_hook(conduit):
 def postresolve_hook(conduit):
     ts = conduit.getTsInfo()
 
+    sep = '-' * 10
+    conduit.info(2, sep)
     for tsmem in ts.getMembers():
-        output = tsmem.po.name + "\n" + tsmem.po.description + "\n" + ("-" * 10)
+        output = tsmem.po.name + "\n" + tsmem.po.description + "\n" + sep
         conduit.info(2, output)
