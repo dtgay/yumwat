@@ -4,4 +4,4 @@
 # Requires root privs.
 
 # Rewrite config so plugin is enabled
-printf "[main]\nenabled=0" > /etc/yum/pluginconf.d/yumwat.conf
+printf "[main]\nenabled=0\ntimid=0" > /etc/yum/pluginconf.d/yumwat.conf
