@@ -14,14 +14,17 @@ def config_hook(conduit):
             help="don't print package description via yumwat")
 
 def postresolve_hook(conduit):
+    opts, args = conduit.getCmdLine()
     ts = conduit.getTsInfo()
 
     sep = '-' * 10
     main_sep = '=' * 10
 
-    conduit.info(2, "\nYUMWAT\n" + main_sep)
-    conduit.info(2, sep)
-    for tsmem in ts.getMembers():
-        output = tsmem.po.name + "\n" + tsmem.po.description + "\n" + sep
-        conduit.info(2, output)
-    conduit.info(2, "END YUMWAT\n" + main_sep)
+    if opts:
+        if not opts.nowat:
+            conduit.info(2, "\nYUMWAT\n" + main_sep)
+            conduit.info(2, sep)
+            for tsmem in ts.getMembers():
+                output = tsmem.po.name + "\n" + tsmem.po.description + "\n" + sep
+                conduit.info(2, output)
+            conduit.info(2, "END YUMWAT\n" + main_sep)
