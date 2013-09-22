@@ -35,3 +35,27 @@ def postresolve_hook(conduit):
             output = tsmem.po.name + "\n" + tsmem.po.description + "\n" + sep
             conduit.info(2, output)
         conduit.info(2, "END YUMWAT\n" + main_sep)
+
+if __name__ == "__main__":
+    import sys, argparse
+    if sys.version_info < (3, 0):
+        import ConfigParser as configparser
+    else:
+        import configparser
+    parser = argparse.ArgumentParser(description="don't wat when you yum")
+    subs = parser.add_subparsers(dest='enable')
+    subs.add_parser('enable'); subs.add_parser('disable')
+    args = parser.parse_args()
+    config = configparser.ConfigParser()
+    with open('yumwat.conf', 'r') as conf_file:
+        config.readfp(conf_file)
+    if 'main' not in config.sections():
+        config.add_section('main')
+    if args.enable == 'enable':
+        config.set('main', 'enabled', '1')
+    elif args.enable == 'disable':
+        config.set('main', 'enabled', '0')
+    else:
+        parser.error("'round these parts we enable or disable our plugins")
+    with open('yumwat.conf', 'w') as conf_file:
+        config.write(conf_file)
