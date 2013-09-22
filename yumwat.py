@@ -22,13 +22,13 @@ def config_hook(conduit):
 
 def postresolve_hook(conduit):
     opts, args = conduit.getCmdLine()
-    timid = conduit.confString('main', 'timid', default='0')
+    timid = int(conduit.confString('main', 'timid', default='0'))
     ts = conduit.getTsInfo()
 
     sep = '-' * 10
     main_sep = '=' * 10
 
-    if (opts and not opts.nowat and not timid) or (timid and opts and opts.wat):
+    if (opts and not opts.nowat) and ((opts and opts.wat) or timid == 0):
         conduit.info(2, "\nYUMWAT\n" + main_sep)
         conduit.info(2, sep)
         for tsmem in ts.getMembers():
