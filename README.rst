@@ -64,6 +64,18 @@ You can disable yumwat without uninstalling it by opening
 ``enabled=1`` to ``enabled=0``. To enable the plugin, simply make sure that
 the line reads, ``enabled=1``.
 
+Timid mode
+----------
+
+The ``yumwat.conf`` file contains the line ``timid=0``. If timid is
+set to 0, timid mode is off, and yumwat will print output unless
+the ``--nowat`` option is used with yum. If timid is set to 1,
+timid mode is on, and yumwat will not print output unless the
+``--wat`` option is used with yum.
+
+Currently, there is no way to enable or disable timid mode
+without manually editing the file.
+
 Uninstalling
 ------------
 
