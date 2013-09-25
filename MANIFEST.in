@@ -1,3 +1,5 @@
 include yumwat/yumwat.conf
 include install.sh
 include uninstall.sh
+include README.rst
+include CHANGES.rst
