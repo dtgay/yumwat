@@ -1,3 +1,4 @@
+#!/usr/bin/python
 from yum.plugins import TYPE_INTERACTIVE
 
 requires_api_version = '2.6'
@@ -52,7 +53,7 @@ if __name__ == "__main__":
     subs.add_parser('assertive')
     args = parser.parse_args()
     config = configparser.ConfigParser()
-    with open('yumwat.conf', 'r') as conf_file:
+    with open('/etc/yum/pluginconf.d/yumwat.conf', 'r') as conf_file:
         config.readfp(conf_file)
     if 'main' not in config.sections():
         config.add_section('main')
@@ -66,5 +67,5 @@ if __name__ == "__main__":
         config.set('main', 'timid', '0')
     else:
         parser.error("'round these parts we configure our plugins")
-    with open('yumwat.conf', 'w') as conf_file:
+    with open('/etc/yum/pluginconf.d/yumwat.conf', 'w') as conf_file:
         config.write(conf_file)
