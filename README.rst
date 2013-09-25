@@ -46,24 +46,6 @@ Manual Installation
 3.  Add the line ``pluginpath=/usr/lib/yum-plugins`` to the file
     ``/etc/yum.conf``.
 
-Enabling and Disabling
-----------------------
-
-Shell Scripts
-*************
-
-Running ``sudo ./enable.sh`` or ``sudo ./disable.sh`` will enable or disable
-the plugin, respectively, however **they will do this by overwriting your
-config file**, so if you have customizations, take the manual route, below.
-
-Manually flipping the switch
-****************************
-
-You can disable yumwat without uninstalling it by opening
-``/etc/yum/pluginconf.d/yumwat.conf`` with a text editor and changing the line
-``enabled=1`` to ``enabled=0``. To enable the plugin, simply make sure that
-the line reads, ``enabled=1``.
-
 Timid mode
 ----------
 
@@ -73,8 +55,18 @@ the ``--nowat`` option is used with yum. If timid is set to 1,
 timid mode is on, and yumwat will not print output unless the
 ``--wat`` option is used with yum.
 
-Currently, there is no way to enable or disable timid mode
-without manually editing the file.
+See below for how to easily enable or disable timid mode.
+
+Enabling and Disabling
+----------------------
+
+**Enable yumwat** -- ``sudo /usr/lib/yum-plugins/yumwat.py enable``
+
+**Disable yumwat** -- ``sudo /usr/lib/yum-plugins/yumwat.py disable``
+
+**Enable timid mode** -- ``sudo /usr/lib/yum-plugins/yumwat.py timid``
+
+**Disable timid mode** -- ``sudo /usr/lib/yum-plugins/yumwat.py assertive``
 
 Uninstalling
 ------------
