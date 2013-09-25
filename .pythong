@@ -1,0 +1,23 @@
+author: David Gay
+classifiers: ['Development Status :: 3 - Alpha', 'Environment :: Plugins', 'Intended
+    Audience :: End Users/Desktop', 'Intended Audience :: Developers', 'Intended Audience
+    :: Information Technology', 'Intended Audience :: System Administrators', 'License
+    :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)', 'Natural
+    Language :: English', 'Programming Language :: Python :: 2.7']
+description: Prints package descriptions. A yum plugin for when you wat.
+directories: [/home/oddshocks/devel/yumwat, /home/oddshocks/devel/yumwat/docs, /home/oddshocks/devel/yumwat/yumwat]
+docs_dir: /home/oddshocks/devel/yumwat/docs
+email: oddshocks@riseup.net
+encoding: utf8
+files: [/home/oddshocks/devel/yumwat/setup.py, /home/oddshocks/devel/yumwat/yumwat/__init__.py]
+init_file: null
+keywords: [yum, plugin, wat, yumwat, package, descriptions]
+license: GPL v3+
+name: yumwat
+project_dir: /home/oddshocks/devel/yumwat
+requires: ['']
+setup_file: /home/oddshocks/devel/yumwat/setup.py
+shortname: yumwat
+source_dir: /home/oddshocks/devel/yumwat/yumwat
+url: https://github.com/oddshocks/yumwat
+version: 0.3.0
