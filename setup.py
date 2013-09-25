@@ -32,6 +32,8 @@ setup(
     ),
     scripts=[
         "distribute_setup.py",
+        "install.sh",
+        "uninstall.sh",
     ],
     include_package_data=True,
     zip_safe=False,
