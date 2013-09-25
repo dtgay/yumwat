@@ -38,9 +38,4 @@ setup(
     install_requires=[
         "",
     ],
-    #TODO: Deal with entry_points
-    #entry_points="""
-    #[console_scripts]
-    #pythong = pythong.util:parse_args
-    #"""
 )
