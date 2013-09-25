@@ -1,0 +1,3 @@
+include yumwat/yumwat.conf
+include install.sh
+include uninstall.sh
