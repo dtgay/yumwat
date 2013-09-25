@@ -20,6 +20,7 @@ def config_hook(conduit):
             action='store_true', default=False,
             help="print yumwat package info even if set to timid")
 
+
 def postresolve_hook(conduit):
     opts, args = conduit.getCmdLine()
     timid = int(conduit.confString('main', 'timid', default='0'))
@@ -37,15 +38,18 @@ def postresolve_hook(conduit):
         conduit.info(2, "END YUMWAT\n" + main_sep)
 
 if __name__ == "__main__":
-    import sys, argparse
+    import argparse
+    import sys
     if sys.version_info < (3, 0):
         import ConfigParser as configparser
     else:
         import configparser
     parser = argparse.ArgumentParser(description="don't wat when you yum")
     subs = parser.add_subparsers(dest='cmd')
-    subs.add_parser('enable'); subs.add_parser('disable')
-    subs.add_parser('timid'); subs.add_parser('assertive')
+    subs.add_parser('enable')
+    subs.add_parser('disable')
+    subs.add_parser('timid')
+    subs.add_parser('assertive')
     args = parser.parse_args()
     config = configparser.ConfigParser()
     with open('yumwat.conf', 'r') as conf_file:
