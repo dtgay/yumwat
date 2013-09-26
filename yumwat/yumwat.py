@@ -33,9 +33,14 @@ def postresolve_hook(conduit):
     if (opts and not opts.nowat) and ((opts and opts.wat) or timid == 0):
         conduit.info(2, "\nYUMWAT\n" + main_sep)
         conduit.info(2, sep)
+        package_names = list()
         for tsmem in ts.getMembers():
-            output = tsmem.po.name + "\n" + tsmem.po.description + "\n" + sep
-            conduit.info(2, output)
+            # Don't print info for the same package twice:
+            if tsmem.po.name not in package_names:
+                output = tsmem.po.name + "\n" \
+                        + tsmem.po.description + "\n" + sep
+                conduit.info(2, output)
+                package_names.append(tsmem.po.name)
         conduit.info(2, "END YUMWAT\n" + main_sep)
 
 if __name__ == "__main__":
