@@ -1,10 +1,17 @@
 yumwat change log
 =================
 
+0.4.3
+-----
+
+Released 13-09-27.
+
+-   Patch prevents the same package from being detailed twice.
+
 0.4.2
 -----
 
-Released 13-05-25. First PyPI release.
+Released 13-09-25. First PyPI release.
 
 -   added uninstall script
 
