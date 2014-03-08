@@ -6,14 +6,13 @@ use_setuptools()
 
 from setuptools import setup, find_packages
 
-version = "0.4.3"
+version = "1.0.0"
 
 setup(
     name="yumwat",
     version=version,
     description="Prints package descriptions. A yum plugin for when you wat.",
     classifiers=[
-        "Development Status :: 3 - Alpha",
         "Environment :: Plugins",
         "Intended Audience :: End Users/Desktop",
         "Intended Audience :: Developers",

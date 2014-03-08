@@ -1,6 +1,12 @@
 yumwat change log
 =================
 
+1.0
+---
+
+-   Install script now adds the plugin path to `/etc/yum.conf`, meaning
+    that it is complete.
+
 0.4.3
 -----
 

@@ -11,3 +11,6 @@ cp yumwat/yumwat.conf /etc/yum/pluginconf.d/
 
 # Install plugin
 cp yumwat/yumwat.py /usr/lib/yum-plugins
+
+# Set yum plugin directory
+echo 'pluginpath=/usr/lib/yum-plugins' >> /etc/yum.conf
