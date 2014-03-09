@@ -32,8 +32,7 @@ Shell Script
 
 I have written a bit of a shell script that does the above installation
 for you. It is ``install.sh``, and will require root privs, like
-so: ``sudo ./install.sh``. Currently, it does not do step 3 below,
-so make sure to do that yourself.
+so: ``sudo ./install.sh``.
 
 Manual Installation
 *******************
