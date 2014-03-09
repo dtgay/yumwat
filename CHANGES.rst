@@ -1,6 +1,12 @@
 yumwat change log
 =================
 
+1.0.1
+-----
+
+-   Properly remove a line from the readme which was not properly
+    removed before.
+
 1.0
 ---
 
