@@ -24,8 +24,8 @@ setup(
     ],
     keywords="yum plugin wat yumwat package descriptions",
     author="David Gay",
-    author_email="oddshocks@riseup.net",
-    url="https://github.com/oddshocks/yumwat",
+    author_email="dgay@riseup.net",
+    url="https://github.com/thedavidgay/yumwat",
     license="GPL v3+",
     packages=find_packages(
     ),

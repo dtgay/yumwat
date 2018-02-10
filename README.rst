@@ -1,7 +1,7 @@
 yumwat
 ======
 
-Wild card! Oddshocks writes a yum plugin!
+Wild card! David Gay writes a yum plugin!
 
 Wat
 ---
