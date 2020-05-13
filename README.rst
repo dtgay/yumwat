@@ -1,7 +1,12 @@
 yumwat
 ======
 
+:Author: David Gay <hello@davidgay.org>
+
 Wild card! David Gay writes a yum plugin!
+
+⚠️ This project is no longer maintained. As of 2020, it hasn't been updated
+in six or seven years. Use at your own risk.
 
 Wat
 ---
